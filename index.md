@@ -1,8 +1,8 @@
 ---
 layout: default
+title: Soumik Ghosh
 ---
 
-# Soumik Ghosh
 
 ## About Me
 
