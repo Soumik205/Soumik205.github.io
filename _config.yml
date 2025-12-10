@@ -1,6 +1,7 @@
 title: Soumik Ghosh
-url: "https://ankitsultana.com"
-baseurl: "/home"
+# --- IMPORTANT CHANGE ---
+url: "https://soumik205.github.io"
+baseurl: "" # Keep baseurl as "" (or "/") for User Pages
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
@@ -8,7 +9,8 @@ markdown: kramdown
 tracking_id: #
 
 footer: yes
-footer_url: "https://github.com/ankitsultana"
+# --- IMPORTANT CHANGE ---
+footer_url: "https://github.com/soumik205"
 footer_text: "© Copyright 2025 Soumik Ghosh. Powered by Jekyll and Github. Last updated: December 10, 2025."
 
 sass:
@@ -17,7 +19,7 @@ sass:
 
 nav:
  - name: "About"
-   link: "/home/"
+   link: "/"
  - name: "CV"
    link: "https://drive.google.com/file/d/1CNT2Ua7UnT8gHBj956G3HlqEPpyqhkhk/view?usp=sharing"
  - name: "Contact"
