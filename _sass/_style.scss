@@ -57,6 +57,37 @@ body {
     }
 }
 
+
+
+/* --- Sidebar Name & Icon Customizations --- */
+
+/* 1. Set the overall name color to dark gray */
+#author-name {
+    color: #333; 
+    text-decoration: none; /* Keep links clean */
+}
+
+/* 2. Make the first name more bold than the last name */
+#first-name {
+    font-weight: 900; /* Extra Bold */
+    /* The last name (Ghosh) will inherit the default H1 weight, making it less bold */
+}
+
+/* 4. Center-align the social icons */
+.sidebar .social-icons {
+    text-align: center;
+    /* Remove the default right margin to keep the icons clustered */
+    a {
+        margin: 0 10px; /* Add margin on both sides for spacing */
+    }
+}
+
+/* Ensure the copyright footer is also centered for balance */
+.footer-small {
+    text-align: center;
+}
+
+
 /* Profile Picture & Bio */
 .profile-picture {
     width: 130px;
@@ -65,7 +96,7 @@ body {
     object-fit: cover;
     margin: 20px auto 10px auto;
     display: block;
-    border: 3px solid $accent;
+    border: 3px solid #999; /* Changed to Gray border */
 }
 
 .bio-text {

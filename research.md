@@ -4,10 +4,10 @@ title: Research & Publications
 permalink: /research/
 ---
 
-# Research Experience
+## Research Experience
 
 
-## Passive Patient Activity Monitoring using Federated Learning
+### Passive Patient Activity Monitoring using Federated Learning
 **[Undergraduate Thesis]**
 *September, 2022 - August, 2023*
 
@@ -19,7 +19,7 @@ permalink: /research/
 
 ---
 
-## A Hybrid Semantic–Sequential Neural Architecture for Multi-label Toxic Comment Classification
+### A Hybrid Semantic–Sequential Neural Architecture for Multi-label Toxic Comment Classification
 *In Collaboration with Sourav Saha and K M Nafi Asib*
 
 * Designed and evaluated a fusion model combining **Transformer-based models with Recurrent Neural Networks (RNNs)** for detecting toxic comments in the low-resource **Bengali language**.
@@ -27,9 +27,9 @@ permalink: /research/
 
 <br>
 
-# Publications
+## Publications
 
-## Journal & Conference Submissions
+### Journal & Conference Submissions
 
 **[S.1]** Ghosh, S., & Asaduzzaman. (2025). **Passive Patient Activity Monitoring using Federated Learning.** *Manuscript submitted to Applied Intelligence (Springer).*
 
