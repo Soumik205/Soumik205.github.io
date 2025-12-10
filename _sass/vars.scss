@@ -1,22 +1,7 @@
-/*
- * Customization Variables
- */
-
-// $accent: #FF0F00;
-// $image-size: 85px;
-
-// /*
-//  * Build Variables, don't touch
-//  */
-
-// $max-width: 700px;
-// $med-width: 600px;
-// $small-width: 480px;
-
-
-
-
-// _sass/vars.scss
 $accent: #4F8EF7;
 $max-width: 900px !default;
-$med-width: 83% !default; // Using 83% to match your media query
+$med-width: 83% !default;
+
+// Added these to prevent errors in typography.scss
+$image-size: 150px; 
+$small-width: 600px;
