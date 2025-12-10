@@ -1,6 +1,6 @@
-title: Researcher
+title: Soumik Ghosh
 url: "https://ankitsultana.com"
-baseurl: "/researcher"
+baseurl: "/home"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
@@ -9,7 +9,7 @@ tracking_id: #
 
 footer: yes
 footer_url: "https://github.com/ankitsultana"
-footer_text: "Page design by Ankit Sultana"
+footer_text: "© Copyright 2025 Soumik Ghosh. Powered by Jekyll and Github. Last updated: December 10, 2025."
 
 sass:
     style: compressed
@@ -17,8 +17,8 @@ sass:
 
 nav:
  - name: "About"
-   link: "/researcher/"
- - name: "Resume"
-   link: "resume.pdf"
+   link: "/home/"
+ - name: "CV"
+   link: "https://drive.google.com/file/d/1CNT2Ua7UnT8gHBj956G3HlqEPpyqhkhk/view?usp=sharing"
  - name: "Contact"
    link: "contact"

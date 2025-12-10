@@ -1,25 +1,47 @@
 ---
 layout: default
 ---
+## Soumik Ghosh
+Software Engineer & Researcher
+
+
 
 ## About Me
 
-<img class="profile-picture" src="sherlock.jpg">
+<img class="profile-picture" src="soumik.jpg">
 
-Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
+I am a research-driven software engineer working with scalable systems, APIs and infrastructure. I enjoy building practical systems-from full-stack applications to deep learning models. I have also previously worked as a cloud service engineer where I worked with cutting edge cloud infrastucture solution & deployment. 
 
-This is a jekyll based resume template. You can find the full source code on [GitHub](https://github.com/bk2dcradle/researcher)
+I completed my undergraduate thesis under the supervision of [Professor Dr. Asaduzzaman](https://scholar.google.com/citations?hl=en&user=DBINVAYAAAAJ) where I worked on **Passive Patient Activity Monitoring using Federated Learning**. This work tried to find novel approaches to detect patient activity using WiFi signals along with federated learning technique. My research interests also diversified to natural language processing in low-resource languages.  
 
 ## Research Interest
+My research interests include **Edge Intelligence, Federated Learning, Privacy Preserving ML and Natural Language Processing**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus ipsum ac erat aliquam dapibus. Vestibulum vehicula placerat ex, a consectetur odio pharetra quis. Mauris id urna ante. Fusce pharetra diam ac nisi aliquet, vel egestas ex iaculis. Pellentesque laoreet cursus tellus sed pellentesque. Praesent a rhoncus elit. Nunc ipsum nisl, consequat sit amet pretium quis, gravida id ipsum.
 
-## Publications
+## 📢 Updates
+
+- <span style="color:#4F8EF7;"><strong>[01 December 2025]</strong></span> One paper got accepted at 28th ICCIT 2025
+- <span style="color:#4F8EF7;"><strong>[01 November 2025]</strong></span> Started working as a Software Engineer at Cookietech Limited.
+- <span style="color:#4F8EF7;"><strong>[05 September 2023]</strong></span> Started working as a Cloud Service Engineer at E-Zone HRM Limited.
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ## Publications
 
 1. F.Bar, J.Doe: Effects of having a placeholder of a name
-2. S.Holmes, J.Watson: Consequences of living with a sociopath in London
+2. S.Holmes, J.Watson: Consequences of living with a sociopath in London -->
 
-## Typography
+<!-- ## Typography
 
 This is a [link](http://google.com). Something *italics* and something **bold**.
 
@@ -42,4 +64,4 @@ Here is a blockquote
 ## References
 
 * Foo Bar: Head of Department, Placeholder Names, Lorem
-* John Doe: Associate Professor, Department of Computer Science, Ipsum
+* John Doe: Associate Professor, Department of Computer Science, Ipsum -->
