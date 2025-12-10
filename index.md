@@ -40,9 +40,8 @@ My research interests include **Edge Intelligence, Federated Learning, Privacy P
 
 ---
 # Education
-
 ## B.Sc. in Computer Science 
-### Chittagong University of Engineering & Technology 
+## Chittagong University of Engineering & Technology 
 *January 2018 - August 2023*
 
 * CGPA: 3.05/4.00 **(Last four semesters avg: 3.37/4.0)**
@@ -53,12 +52,12 @@ My research interests include **Edge Intelligence, Federated Learning, Privacy P
 
 
 ---
-## Experience
+# Experience
 
-### Software Engineer
+## Software Engineer
 **Cookietech Ltd.** | *Nov 2025 - Present*
 
-### Cloud Service Engineer
+## Cloud Service Engineer
 **E-Zone HRM Ltd.** | *Sep 2023 - Aug 2025*
 
 ---
