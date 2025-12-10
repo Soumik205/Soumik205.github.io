@@ -1,131 +1,130 @@
-@import "vars";
+/* --- 1. GLOBAL OVERRIDES --- */
+.wrapper {
+    // Remove wrapper as the main layout driver
+    min-height: auto;
+}
 
-/*
- * Basic
- */
+/* --- 2. FLEXBOX LAYOUT (Two Columns) --- */
+.site-container {
+    display: flex;
+    min-height: 100vh;
+}
 
-html {
+/* --- 3. SIDEBAR (Left Column) --- */
+.sidebar {
+    width: 280px; /* Fixed width for the sidebar */
+    padding: 30px;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    position: fixed; /* Keep it locked */
     height: 100%;
-    margin: 0;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    
+    // Style for the Navigation links in the sidebar
+    .navbar-ul {
+        margin: 0;
+        padding: 0;
+        .nav-list {
+            list-style: none;
+            margin: 10px 0;
+            display: block; // Stack links vertically
+            float: none;
+            
+            a {
+                font-size: 1.1em;
+                font-weight: 500;
+                color: #333;
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
+
+/* Profile Picture & Bio */
+.profile-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0 10px 0;
+    display: block;
+    border: 3px solid $accent;
+}
+
+.bio-text {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+    a {
+        font-size: 1.4em;
+        margin-right: 15px;
+        color: #555;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+.footer-small {
+    font-size: 0.7em;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* --- 4. CONTENT (Right Column) --- */
+.content-wrapper {
+    margin-left: 280px; /* Offset content by the sidebar width */
+    flex-grow: 1; /* Take up remaining space */
+    padding: 30px 40px;
+    background-color: #f8f8f8; /* Light background for the content area */
+}
+
+.container.content {
+    max-width: 900px; /* Set a readable max-width for the content */
+    margin: 0; /* Override the 'margin: auto' from the original .container */
     padding: 0;
 }
-body {
-    margin: 0;
-    font-family: "Inconsolata";
-    height: 100%;
-}
-a {
-    text-decoration: none;
-    color: $accent;
-}
-a:hover {
-    text-decoration: underline;
-}
-hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
 
-/*
- * Navbar
- */
 
-#author-name {
-    font-size: 30px;
-    color: #272727;
-    display: inline-block;
-}
-.navbar {
-    padding: 50px 0 50px 0;
-}
-.navbar-ul {
-    display: inline-block;
-    margin: 0;
-    padding: 5px 0 5px 0;
-    margin-left: 20px;
-}
-.nav-list {
-    list-style-type: none;
-    margin: 0 5px 0 10px;
-}
-.alignable {
-    display: inline-block;
-}
-.pull-left {
-    @extend .alignable;
-    float: left;
-}
-.pull-right {
-    @extend .alignable;
-    float: right;
-}
+/* --- 5. RESPONSIVENESS OVERRIDES --- */
 
-/* Divs */
+@media (max-width: 992px) {
+    .site-container {
+        display: block; /* Stack elements vertically on smaller screens */
+    }
 
-.container {
-    max-width: $max-width;
-    margin: auto;
-}
-.wrapper {
-    min-height: 100%;
-}
+    .sidebar {
+        width: 100%;
+        position: relative; /* Un-fix the sidebar for scrolling */
+        height: auto;
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
+        
+        // Center-align items in mobile view
+        text-align: center;
+        .profile-picture {
+            margin: 20px auto 10px auto;
+        }
+        .navbar-ul {
+            display: inline-block;
+            .nav-list {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+        .social-icons {
+            text-align: center;
+        }
+    }
 
-/* Institute Image */
-
-#ins-logo {
-	margin: auto;
-	display: block;
-	max-height: 100px;
-	text-align: center;
-}
-
-/* Mobile */
-
-@media (max-width: 800px) {
-    .container {
-        max-width: $med-width;
-        transition: 0.3s ease all;
+    .content-wrapper {
+        margin-left: 0; /* Remove the offset */
+        padding: 20px;
     }
 }
-
-@media (max-width: 650px) {
-    .container {
-        max-width: 83%;
-    }
-    .navbar-ul {
-        margin-top: 5px;
-    }
-}
-
-@media (max-width: 500px) {
-	.navbar {
-		text-align: center;
-		padding: 50px 0px 0px 0px;
-	}
-	#author-name {
-		width: 100%;
-		float: none;
-	}
-	#navlist {
-		padding: 10px 0 10px 0;
-		margin: 0;
-		display: block;
-		float: none;
-		text-align: center;
-		width: 100%;
-	}
-	#navlist li.alignable {
-		display: inline-block;
-	}
-	#navlist li.pull-left {
-		float: none;
-	}
-	#navlist li.nav-list {
-		margin: 0;
-	}
-}
-
-@import "typography";
-@import "tables";

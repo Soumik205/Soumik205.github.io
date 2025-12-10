@@ -4,9 +4,9 @@ layout: default
 # Soumik Ghosh
 Software Engineer & Researcher
 
+<a href="mailto:soumikghosh205@gmail.com">soumikghosh205 [at] gmail [dot] com </a>
 ---
 
-## 👨‍💻 About Me
 <div class="about-container">
     <img class="profile-picture" src="soumik.jpg" alt="Soumik Ghosh Profile Picture">
 
