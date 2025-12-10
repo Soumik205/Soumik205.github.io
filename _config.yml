@@ -20,6 +20,10 @@ sass:
 nav:
  - name: "About"
    link: "/"
+ - name: "Education"
+   link: "/education/"
+ - name: "Experience"
+   link: "/experience/"
  - name: "CV"
    link: "https://drive.google.com/file/d/1CNT2Ua7UnT8gHBj956G3HlqEPpyqhkhk/view?usp=sharing"
  - name: "Contact"
