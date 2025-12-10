@@ -20,8 +20,8 @@ sass:
 nav:
  - name: "About"
    link: "/"
-#  - name: "Education"
-#    link: "/education/"
+ - name: "Research"
+   link: "/research/"
 #  - name: "Experience"
 #    link: "/experience/"
  - name: "CV"

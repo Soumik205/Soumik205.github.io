@@ -71,7 +71,8 @@ body {
 .bio-text {
     color: #666;
     font-size: 0.9em;
-    text-align: left; /* Or center if you prefer */
+    text-align: center; /* Or center if you prefer */
+    font-weight: bold;
 }
 
 /* Social Icons */
@@ -102,6 +103,25 @@ body {
     background-color: #f8f8f8;
 }
 
+.content-wrapper h1,
+.content-wrapper h2 {
+    /* Add extra space above each major section title */
+    margin-top: 2.5em; /* Increase from the default */
+    
+    /* Ensure there's space below the title before the content starts */
+    margin-bottom: 0.8em; 
+    
+    /* Remove any unnecessary padding or borders if they are present */
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* Add space below the Education and Experience items */
+.content-wrapper h3 {
+    margin-top: 1.5em; 
+    margin-bottom: 0.5em;
+}
+
 .container.content {
     max-width: 900px;
     margin: 0; 
@@ -112,9 +132,16 @@ body {
 .updates-list {
     list-style: none;
     padding-left: 0;
+    margin-bottom: 2.5em;
 }
 .updates-list li {
     margin-bottom: 0.8em;
+}
+
+.updates-list .date {
+    color: #1a5c96; /* This is a "Deep Blue" */
+    font-weight: bold; /* Optional: Makes the date stand out more */
+    margin-right: 5px; /* Adds a tiny space after the closing bracket */
 }
 
 /* --- 5. RESPONSIVENESS OVERRIDES --- */
