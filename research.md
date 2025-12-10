@@ -4,9 +4,8 @@ title: Research & Publications
 permalink: /research/
 ---
 
-# 🔬 Research Experience
+# Research Experience
 
-<hr>
 
 ## Passive Patient Activity Monitoring using Federated Learning
 **[Undergraduate Thesis]**
@@ -28,9 +27,7 @@ permalink: /research/
 
 <br>
 
-# 📚 Publications
-
-<hr>
+# Publications
 
 ## Journal & Conference Submissions
 
