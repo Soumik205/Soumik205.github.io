@@ -1,227 +1,152 @@
 @import "vars";
 
-/* --- 0. GLOBAL RESET & BOX SIZING (CRITICAL FIX) --- */
+/* --- 0. GLOBAL RESET --- */
 * {
     box-sizing: border-box;
-}
-
-/* --- 1. GLOBAL OVERRIDES --- */
-.wrapper {
-    min-height: auto;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #fcfcfc; /* Slightly brighter background */
+    color: #333;
+    font-family: 'Inconsolata', monospace; /* Ensuring font consistency */
 }
 
-/* --- 2. FLEXBOX LAYOUT --- */
-.site-container {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: row;
-}
-
-/* --- 3. SIDEBAR (Left Column) --- */
-.sidebar {
-    width: 280px; /* Fixed width */
-    min-width: 280px; /* Prevent shrinking */
-    padding: 30px;
-    background-color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-    position: fixed; /* Keep it locked */
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 100;
-    
-    .navbar-ul {
-        margin: 0;
-        padding: 0;
-        .nav-list {
-            list-style: none;
-            margin: 10px 0;
-            display: block;
-            float: none;
-            
-            a {
-                font-size: 1.1em;
-                font-weight: 500;
-                color: #333;
-                text-decoration: none;
-                &:hover {
-                    color: $accent;
-                }
-            }
-        }
-    }
-}
-
-
-
-/* --- Sidebar Name & Icon Customizations --- */
-
-/* 1. Center the H1 and set the base weight for the Last Name (Ghosh) */
-.sidebar h1 {
-    text-align: center;
-    font-weight: 400; /* Sets "Ghosh" to Normal/Thin */
-    margin-top: 0;    /* Fixes any default top spacing issues */
-}
-
-/* 2. Style the link text */
-#author-name {
-    color: #333; 
+a {
     text-decoration: none;
-    display: inline-block; 
+    color: $accent;
+    &:hover { text-decoration: underline; }
 }
 
-/* 3. Make the first name (Soumik) Bold */
-#first-name {
-    font-weight: 700; /* Max boldness available for Inconsolata */
+/* --- 1. HEADER STYLES (Top Navigation) --- */
+.site-header {
+    background-color: white;
+    padding: 40px 20px 20px 20px;
+    text-align: center; /* Centers everything in header */
+    border-bottom: 1px solid #eee; /* Subtle separation line */
 }
 
-/* 4. Center-align the social icons */
-.sidebar .social-icons {
-    text-align: center;
-    a {
-        margin: 0 10px; 
-    }
-}
-
-/* Ensure the copyright footer is also centered */
-.footer-small {
-    text-align: center;
-}
-
-/* Profile Picture & Bio */
+/* Profile Picture */
 .profile-picture {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 20px auto 10px auto;
+    margin: 0 auto 15px auto; /* Centers the image */
     display: block;
-    border: 3px solid #999; /* Changed to Gray border */
+    border: 3px solid #ccc; /* Gray border */
+}
+
+/* Name Styling */
+.site-header h1 {
+    margin: 10px 0 5px 0;
+    font-weight: 400; /* Thin for last name */
+    font-size: 2.2em;
+}
+
+#author-name {
+    color: #222;
+    text-decoration: none;
+}
+
+#first-name {
+    font-weight: 700; /* Bold for first name */
 }
 
 .bio-text {
     color: #666;
-    font-size: 0.9em;
-    text-align: center; /* Or center if you prefer */
-    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Navigation Menu */
+.top-nav ul {
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.top-nav li {
+    display: inline-block; /* Makes list horizontal */
+    margin: 0 15px; /* Spacing between links */
+}
+
+.top-nav a {
+    color: #444;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    &:hover {
+        color: $accent;
+        text-decoration: none;
+    }
 }
 
 /* Social Icons */
 .social-icons {
     margin-top: 15px;
-    a {
-        font-size: 1.4em;
-        margin-right: 15px;
-        color: #555;
-        text-decoration: none;
-        &:hover {
-            color: $accent;
-        }
-    }
+}
+.social-icons a {
+    font-size: 1.5em;
+    margin: 0 12px;
+    color: #555;
+    &:hover { color: $accent; }
 }
 
-.footer-small {
-    font-size: 0.7em;
-    color: #777;
-    margin-top: 20px;
-}
-
-/* --- 4. CONTENT (Right Column) --- */
+/* --- 2. MAIN CONTENT (Centered Column) --- */
 .content-wrapper {
-    margin-left: 280px; /* Matches Sidebar width exactly */
-    width: calc(100% - 280px);
-    padding: 40px 60px; /* Generous padding for readability */
-    background-color: #f8f8f8;
-}
-
-.content-wrapper h1,
-.content-wrapper h2 {
-    /* Add extra space above each major section title */
-    margin-top: 2.5em; /* Increase from the default */
-    
-    /* Ensure there's space below the title before the content starts */
-    margin-bottom: 0.8em; 
-    
-    /* Remove any unnecessary padding or borders if they are present */
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-/* Add space below the Education and Experience items */
-.content-wrapper h3 {
-    margin-top: 1.5em; 
-    margin-bottom: 0.5em;
+    width: 100%;
+    padding: 40px 20px;
+    background-color: transparent;
 }
 
 .container.content {
-    max-width: 900px;
-    margin: 0; 
-    padding: 0;
+    max-width: 800px; /* Limits width to prevent looking stretched */
+    margin: 0 auto;   /* Centers the block horizontally */
+    line-height: 1.6;
 }
 
-/* Updates List Style */
+/* Section Headings inside Content */
+.content-wrapper h1, 
+.content-wrapper h2 {
+    margin-top: 2.0em;
+    margin-bottom: 0.8em;
+    color: #222;
+    border-bottom: 1px solid #eee; /* Adds underline to headings */
+    padding-bottom: 10px;
+}
+
+.content-wrapper h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* --- 3. LISTS & UTILITIES --- */
 .updates-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 2.5em;
 }
 .updates-list li {
     margin-bottom: 1em;
 }
-
 .updates-list .date {
-    color: #1a5c96; /* This is a "Deep Blue" */
-    font-weight: bold; /* Optional: Makes the date stand out more */
-    margin-right: 5px; /* Adds a tiny space after the closing bracket */
+    color: #1a5c96; 
+    font-weight: bold;
+    margin-right: 5px;
 }
 
-/* --- 5. RESPONSIVENESS OVERRIDES --- */
-@media (max-width: 992px) {
-    .site-container {
-        display: block; /* Stack vertically */
-    }
-
-    .sidebar {
-        width: 100%;
-        min-width: 100%;
-        position: relative; 
-        height: auto;
-        box-shadow: none;
-        border-bottom: 1px solid #eee;
-        text-align: center;
-        
-        .profile-picture {
-            margin: 0 auto 15px auto;
-        }
-        .bio-text {
-            text-align: center;
-        }
-        .navbar-ul {
-            display: inline-block;
-            margin-top: 15px;
-            .nav-list {
-                display: inline-block;
-                margin: 0 10px;
-            }
-        }
-        .social-icons {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-    }
-
-    .content-wrapper {
-        margin-left: 0; 
-        width: 100%;
-        padding: 30px 20px; /* Less padding on mobile */
-    }
+/* Footer */
+.site-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0 50px 0;
+    text-align: center;
+    color: #888;
 }
 
-/* Import other partials at the end */
+/* --- 4. IMPORTS --- */
 @import "typography";
 @import "tables";
