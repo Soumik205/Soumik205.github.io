@@ -61,41 +61,37 @@ body {
 
 /* --- Sidebar Name & Icon Customizations --- */
 
-/* --- Sidebar Name Styling Fix (Final Alignment) --- */
-
-/* 1. Center the H1 heading block itself */
+/* 1. Center the H1 and set the base weight for the Last Name (Ghosh) */
 .sidebar h1 {
     text-align: center;
-    font-weight: 600;
+    font-weight: 400; /* Sets "Ghosh" to Normal/Thin */
+    margin-top: 0;    /* Fixes any default top spacing issues */
 }
 
-/* 2. Style the link/name text */
+/* 2. Style the link text */
 #author-name {
     color: #333; 
     text-decoration: none;
-    display: inline-block; /* Treat the link as a contained block */
+    display: inline-block; 
 }
 
-/* 3. Make the first name more bold than the last name */
+/* 3. Make the first name (Soumik) Bold */
 #first-name {
-    font-weight: 1500; /* Extra Bold */
-    /* Last name inherits the default H1 font weight (usually 700 or 600) */
+    font-weight: 700; /* Max boldness available for Inconsolata */
 }
 
 /* 4. Center-align the social icons */
 .sidebar .social-icons {
     text-align: center;
-    /* Remove the default right margin to keep the icons clustered */
     a {
-        margin: 0 10px; /* Add margin on both sides for spacing */
+        margin: 0 10px; 
     }
 }
 
-/* Ensure the copyright footer is also centered for balance */
+/* Ensure the copyright footer is also centered */
 .footer-small {
     text-align: center;
 }
-
 
 /* Profile Picture & Bio */
 .profile-picture {
