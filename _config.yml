@@ -8,10 +8,10 @@ markdown: kramdown
 
 tracking_id: #
 
-footer: none
+footer: yes
 # --- IMPORTANT CHANGE ---
 footer_url: "https://github.com/soumik205"
-footer_text: "© Copyright 2025 Soumik Ghosh. Powered by Jekyll and Github. Last updated: December 10, 2025."
+footer_text: "© Copyright 2025 Soumik Ghosh."
 
 sass:
     style: compressed

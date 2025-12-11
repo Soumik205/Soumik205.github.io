@@ -57,12 +57,23 @@
 
     <footer class="site-footer">
         {% if site.footer == true %}
-            <hr />
-            <p>
-                <a href="{{ site.footer_url }}" style="color: black"><small>{{ site.footer_text }}</small></a>
-            </p>
-        {% endif %}
+            {% endif %}
     </footer>
+    
+    <script>
+        window.onscroll = function() {stickyHeader()};
+
+        var header = document.querySelector(".site-header");
+        var stickyThreshold = 200; // The scroll position where the header shrinks
+
+        function stickyHeader() {
+            if (window.scrollY > stickyThreshold) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        }
+    </script>
 
     {% if site.tracking_id %}
         <script>

@@ -22,9 +22,53 @@ a {
 /* --- 1. HEADER STYLES (Top Navigation) --- */
 .site-header {
     background-color: white;
-    padding: 40px 20px 20px 20px;
-    text-align: center; /* Centers everything in header */
-    border-bottom: 1px solid #eee; /* Subtle separation line */
+    padding: 40px 20px 20px 20px; /* Original large padding */
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    
+    /* ADD STICKY PROPERTIES */
+    position: sticky;
+    top: 0;
+    z-index: 99; /* Ensure it stays above the content */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+/* --- STICKY / SCROLLED HEADER STATE --- */
+.site-header.scrolled {
+    padding: 10px 20px; /* Shrink the padding (makes header thinner) */
+    
+    /* Center the title/name when shrunk */
+    .header-inner {
+        max-width: 800px;
+        margin: 0 auto; 
+    }
+    
+    /* HIDE THE PROFILE PICTURE */
+    .profile-picture {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        margin: 0 !important;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    /* SHRINK AND MOVE THE NAME TO THE LEFT (optional, looks better on a smaller bar) */
+    h1 {
+        display: inline-block;
+        font-size: 1.4em;
+        margin: 0 15px 0 0;
+    }
+    
+    /* Align the nav links and social icons horizontally with the name */
+    .top-nav {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .social-icons {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+    }
 }
 
 /* Profile Picture */
