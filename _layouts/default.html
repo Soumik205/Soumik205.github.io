@@ -62,19 +62,27 @@
     </footer>
     
     <script>
-        window.onscroll = function() {stickyHeader()};
+    window.onscroll = function() {
+        stickyHeader();
+    };
 
-        var header = document.querySelector(".site-header");
-        var stickyThreshold = 200; // The scroll position where the header shrinks
+    var header = document.querySelector(".site-header");
+    var headerInner = document.querySelector(".header-inner");
+    var profilePic = document.querySelector(".profile-picture");
+    var stickyThreshold = 200; // Scroll position where the header shrinks
 
-        function stickyHeader() {
-            if (window.scrollY > stickyThreshold) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
+    function stickyHeader() {
+        if (window.scrollY > stickyThreshold) {
+            header.classList.add("scrolled");
+            // Optional: If name doesn't align well when sticky, force its vertical position
+            // headerInner.style.transform = 'translateY(0)'; 
+        } else {
+            header.classList.remove("scrolled");
+            // Optional: Reset transform
+            // headerInner.style.transform = 'translateY(0)'; 
         }
-    </script>
+    }
+</script>
 
     {% if site.tracking_id %}
         <script>

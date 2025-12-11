@@ -33,9 +33,9 @@ a {
     /* This handles the overall padding change smoothly */
     transition: padding 0.3s ease-in-out; 
 }
-/* --- STICKY / SCROLLED HEADER STATE --- */
+/* --- STICKY / SCROLLED HEADER STATE (Smoother Transition) --- */
 .site-header.scrolled {
-    padding: 10px 20px; /* Shrink the padding (makes header thinner) */
+    padding: 10px 20px; /* Shrink the padding for a smaller bar */
     
     /* Center the title/name when shrunk */
     .header-inner {
@@ -43,35 +43,31 @@ a {
         margin: 0 auto; 
     }
     
-    /* HIDE THE PROFILE PICTURE */
-    .profile-picture {
+    /* HIDE THE PROFILE PICTURE and Bio */
+    .profile-picture,
+    .bio-text {
         opacity: 0;
         visibility: hidden;
-        height: 0; /* Ensures the space is removed */
-        margin: 0 auto !important; /* Critical to remove space cleanly */
+        /* Using max-height: 0 ensures the content area shrinks smoothly */
+        max-height: 0; 
+        margin: 0 auto !important; 
+        padding: 0 !important;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
-    
-    /* SHRINK AND ALIGN THE NAME */
+
+    /* SHRINK AND ALIGN THE NAME (Ensure its transition is smooth) */
     h1 {
         display: inline-block;
         font-size: 1.4em;
         margin: 0 15px 0 0;
-        /* Smoother transition for font size change */
         transition: font-size 0.3s ease-in-out, margin 0.3s ease-in-out;
-        vertical-align: middle; /* Align with nav and icons */
+        vertical-align: middle; 
     }
     
-    /* Align the nav links and social icons horizontally with the name */
-    .top-nav {
-        display: inline-block;
+    /* Ensure Nav and Social icons are also vertically aligned */
+    .top-nav, .social-icons {
         vertical-align: middle;
-    }
-    
-    .social-icons {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
-        margin-top: 0; /* Clear any default top margin */
+        margin-top: 0;
     }
 }
 
@@ -81,11 +77,12 @@ a {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 15px auto; /* Centers the image */
+    margin: 0 auto 15px auto;
     display: block;
-    border: 3px solid #ccc; /* Gray border */
-    /* *** CRITICAL FIX: Base transition ensures smooth animation for height, opacity, and margin changes *** */
-    transition: all 0.3s ease-in-out;
+    border: 3px solid #ccc;
+    /* *** CRITICAL FIX: Set a max-height that is always greater than its actual height *** */
+    max-height: 140px; /* Base max-height */
+    transition: all 0.3s ease-in-out; 
 }
 
 /* Name Styling */
