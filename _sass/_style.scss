@@ -22,10 +22,11 @@ a {
 /* --- 1. HEADER STYLES (Static Top Section) --- */
 .site-header {
     background-color: white;
-    padding: 40px 20px 20px 20px; 
-    text-align: center; /* Centers all inline elements: photo, text, nav */
+    padding: 40px 20px 20px 20px;
+    text-align: center;
     border-bottom: 1px solid #eee;
-    /* REMOVED: position: sticky, top, z-index, transition */
+    /* CONFIRMED: No 'position: sticky' or 'position: fixed' property. */
+    /* The header will now scroll with the page in all browsers. */
 }
 
 /* Profile Picture */
@@ -37,7 +38,6 @@ a {
     margin: 0 auto 15px auto; 
     display: block;
     border: 3px solid #ccc;
-    /* REMOVED: max-height, transition */
 }
 
 /* Name Styling */
@@ -45,7 +45,6 @@ a {
     margin: 10px 0 5px 0;
     font-weight: 400; /* Thin for last name */
     font-size: 2.2em;
-    /* REMOVED: transition */
 }
 
 #author-name {
@@ -91,7 +90,6 @@ a {
 /* Social Icons */
 .social-icons {
     margin-top: 15px;
-    /* Removed margin changes related to sticky bar */
 }
 .social-icons a {
     font-size: 1.5em;
@@ -156,8 +154,6 @@ a {
 .site-footer .copyright-text {
     margin: 0;
 }
-
-/* REMOVED: ALL .site-header.scrolled RULES */
 
 /* --- 4. IMPORTS --- */
 @import "typography";
