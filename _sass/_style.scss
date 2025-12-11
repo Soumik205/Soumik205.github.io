@@ -65,7 +65,7 @@ body {
 
 /* 1. Center the H1 heading block itself */
 .sidebar h1 {
-    text-align: center;
+    text-align: left;
 }
 
 /* 2. Style the link/name text */
@@ -77,7 +77,7 @@ body {
 
 /* 3. Make the first name more bold than the last name */
 #first-name {
-    font-weight: 900; /* Extra Bold */
+    font-weight: 1200; /* Extra Bold */
     /* Last name inherits the default H1 font weight (usually 700 or 600) */
 }
 
