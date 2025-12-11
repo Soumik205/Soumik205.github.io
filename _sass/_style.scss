@@ -26,11 +26,12 @@ a {
     text-align: center;
     border-bottom: 1px solid #eee;
     
-    /* ADD STICKY PROPERTIES */
+    /* STICKY PROPERTIES */
     position: sticky;
     top: 0;
-    z-index: 99; /* Ensure it stays above the content */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
+    z-index: 99;
+    /* This handles the overall padding change smoothly */
+    transition: padding 0.3s ease-in-out; 
 }
 /* --- STICKY / SCROLLED HEADER STATE --- */
 .site-header.scrolled {
@@ -46,16 +47,18 @@ a {
     .profile-picture {
         opacity: 0;
         visibility: hidden;
-        height: 0;
-        margin: 0 !important;
-        transition: all 0.3s ease-in-out;
+        height: 0; /* Ensures the space is removed */
+        margin: 0 auto !important; /* Critical to remove space cleanly */
     }
     
-    /* SHRINK AND MOVE THE NAME TO THE LEFT (optional, looks better on a smaller bar) */
+    /* SHRINK AND ALIGN THE NAME */
     h1 {
         display: inline-block;
         font-size: 1.4em;
         margin: 0 15px 0 0;
+        /* Smoother transition for font size change */
+        transition: font-size 0.3s ease-in-out, margin 0.3s ease-in-out;
+        vertical-align: middle; /* Align with nav and icons */
     }
     
     /* Align the nav links and social icons horizontally with the name */
@@ -68,6 +71,7 @@ a {
         display: inline-block;
         vertical-align: middle;
         margin-left: 10px;
+        margin-top: 0; /* Clear any default top margin */
     }
 }
 
@@ -80,6 +84,8 @@ a {
     margin: 0 auto 15px auto; /* Centers the image */
     display: block;
     border: 3px solid #ccc; /* Gray border */
+    /* *** CRITICAL FIX: Base transition ensures smooth animation for height, opacity, and margin changes *** */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Name Styling */
@@ -87,6 +93,8 @@ a {
     margin: 10px 0 5px 0;
     font-weight: 400; /* Thin for last name */
     font-size: 2.2em;
+    /* Add transition here so the margin change on scroll is also smooth */
+    transition: all 0.3s ease-in-out; 
 }
 
 #author-name {
@@ -186,9 +194,15 @@ a {
 .site-footer {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 0 50px 0;
+    padding: 30px 0 50px 0; /* Increased top padding for separation */
     text-align: center;
     color: #888;
+    border-top: 1px solid #eee; /* Adds a clean line above the copyright */
+    font-size: 0.9em;
+}
+
+.site-footer .copyright-text {
+    margin: 0; /* Remove default paragraph margins */
 }
 
 /* --- 4. IMPORTS --- */
