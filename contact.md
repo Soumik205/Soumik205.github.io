@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Contact
+title: Contact | Soumik Ghosh
 permalink: /contact/
 ---
 
-# 📬 Get In Touch
+# Get In Touch
 
 <p>I am actively seeking new opportunities and collaborations. Feel free to reach out via email for professional inquiries, or connect with me through my social channels.</p>
 
