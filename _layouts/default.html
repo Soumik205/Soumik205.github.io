@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ site.description }}">
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 </head>
 <body>
@@ -61,39 +64,8 @@
         </p>
     </footer>
     
-    <script>
-    window.onscroll = function() {
-        stickyHeader();
-    };
-
-    var header = document.querySelector(".site-header");
-    var headerInner = document.querySelector(".header-inner");
-    var profilePic = document.querySelector(".profile-picture");
-    var stickyThreshold = 200; // Scroll position where the header shrinks
-
-    function stickyHeader() {
-        if (window.scrollY > stickyThreshold) {
-            header.classList.add("scrolled");
-            // Optional: If name doesn't align well when sticky, force its vertical position
-            // headerInner.style.transform = 'translateY(0)'; 
-        } else {
-            header.classList.remove("scrolled");
-            // Optional: Reset transform
-            // headerInner.style.transform = 'translateY(0)'; 
-        }
-    }
-</script>
-
     {% if site.tracking_id %}
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', '{{ site.tracking_id }}', 'auto');
-          ga('send', 'pageview');
-        </script>
-    {% endif %}
+        {% endif %}
 
 </body>
 </html>

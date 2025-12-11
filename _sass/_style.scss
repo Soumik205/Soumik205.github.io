@@ -8,9 +8,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fcfcfc; /* Slightly brighter background */
+    background-color: #fcfcfc;
     color: #333;
-    font-family: 'Inconsolata', monospace; /* Ensuring font consistency */
+    font-family: 'Inconsolata', monospace;
 }
 
 a {
@@ -19,61 +19,13 @@ a {
     &:hover { text-decoration: underline; }
 }
 
-/* --- 1. HEADER STYLES (Top Navigation) --- */
+/* --- 1. HEADER STYLES (Static Top Section) --- */
 .site-header {
     background-color: white;
-    padding: 40px 20px 20px 20px;
-    text-align: center;
+    padding: 40px 20px 20px 20px; 
+    text-align: center; /* Centers all inline elements: photo, text, nav */
     border-bottom: 1px solid #eee;
-    
-    /* STICKY PROPERTIES */
-    position: sticky;
-    top: 0;
-    z-index: 99;
-    /* transition: padding 0.3s ease-in-out; <--- REMOVE THIS LINE */
-}
-/* --- STICKY / SCROLLED HEADER STATE (INSTANT SHRINK) --- */
-.site-header.scrolled {
-    padding: 10px 20px; /* INSTANTLY SHRINK PADDING */
-    
-    /* Center the title/name when shrunk */
-    .header-inner {
-        max-width: 800px;
-        margin: 0 auto; 
-    }
-    
-    /* HIDE THE PICTURE AND BIO INSTANTLY */
-    .profile-picture,
-    .bio-text {
-        display: none !important; 
-        height: 0; /* Ensures no visual space remains */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    /* HIDE THE SOCIAL ICONS INSTANTLY */
-    .social-icons {
-        display: none !important;
-    }
-
-    /* SHRINK AND ALIGN THE NAME (Instant change) */
-    h1 {
-        display: inline-block;
-        font-size: 1.4em; /* Smaller size for the bar */
-        margin: 0 15px 0 0;
-        vertical-align: middle; 
-    }
-    
-    /* Align the nav links horizontally with the name */
-    .top-nav {
-        display: inline-block;
-        vertical-align: middle;
-        
-        /* Reduce nav margin slightly for the tight bar */
-        ul {
-            margin: 0; 
-        }
-    }
+    /* REMOVED: position: sticky, top, z-index, transition */
 }
 
 /* Profile Picture */
@@ -82,11 +34,10 @@ a {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 15px auto; 
     display: block;
     border: 3px solid #ccc;
-    max-height: 140px; 
-    /* transition: all 0.3s ease-in-out; <--- REMOVE THIS LINE */
+    /* REMOVED: max-height, transition */
 }
 
 /* Name Styling */
@@ -94,8 +45,7 @@ a {
     margin: 10px 0 5px 0;
     font-weight: 400; /* Thin for last name */
     font-size: 2.2em;
-    /* Add transition here so the margin change on scroll is also smooth */
-    transition: all 0.3s ease-in-out; 
+    /* REMOVED: transition */
 }
 
 #author-name {
@@ -121,8 +71,8 @@ a {
 }
 
 .top-nav li {
-    display: inline-block; /* Makes list horizontal */
-    margin: 0 15px; /* Spacing between links */
+    display: inline-block;
+    margin: 0 15px;
 }
 
 .top-nav a {
@@ -141,6 +91,7 @@ a {
 /* Social Icons */
 .social-icons {
     margin-top: 15px;
+    /* Removed margin changes related to sticky bar */
 }
 .social-icons a {
     font-size: 1.5em;
@@ -168,7 +119,7 @@ a {
     margin-top: 2.0em;
     margin-bottom: 0.8em;
     color: #222;
-    border-bottom: 1px solid #eee; /* Adds underline to headings */
+    border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
 
@@ -195,16 +146,18 @@ a {
 .site-footer {
     max-width: 800px;
     margin: 0 auto;
-    padding: 30px 0 50px 0; /* Increased top padding for separation */
+    padding: 30px 0 50px 0;
     text-align: center;
     color: #888;
-    border-top: 1px solid #eee; /* Adds a clean line above the copyright */
+    border-top: 1px solid #eee;
     font-size: 0.9em;
 }
 
 .site-footer .copyright-text {
-    margin: 0; /* Remove default paragraph margins */
+    margin: 0;
 }
+
+/* REMOVED: ALL .site-header.scrolled RULES */
 
 /* --- 4. IMPORTS --- */
 @import "typography";
