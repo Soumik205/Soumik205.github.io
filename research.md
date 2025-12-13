@@ -31,7 +31,7 @@ permalink: /research/
 
 ### Journal & Conference Submissions
 
-**[S.1]** Ghosh, S., & Asaduzzaman. (2025). **Passive Patient Activity Monitoring using Federated Learning.** *Manuscript submitted to Applied Intelligence (Springer).*
+**[S.1]** Ghosh, S., & Asaduzzaman. (2025). **Passive Patient Activity Monitoring using Federated Learning.** *Manuscript submitted to Wireless Personal Communications (Springer).*
 
 **[C.1]** Saha, S., Ghosh, S., & Asib, K. M. N. (2025). **ToxiFusion: A Hybrid Semantic–Sequential Neural Architecture for Multi-Label Toxic Comment Classification.** *Manuscript accepted for presentation at the 28th International Conference on Computer and Information Technology (ICCIT).*
 

@@ -31,7 +31,7 @@ My research interests include **Edge Intelligence, Federated Learning, Privacy P
   <br>
   **Ghosh, S.**, & Asaduzzaman.
   <br>
-  *Applied Intelligence (Springer)* | (S) 2025
+  *Wireless Personal Communications (Springer)* | (S) 2025
 
 * *ToxiFusion: A Hybrid Semantic–Sequential Neural Architecture for Multi-Label Toxic Comment Classification*
   <br>
